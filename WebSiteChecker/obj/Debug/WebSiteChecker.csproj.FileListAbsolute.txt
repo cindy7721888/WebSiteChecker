@@ -1,0 +1,9 @@
+C:\Users\AKen\Google 雲端硬碟\Projects\VisualStudio\WebSiteChecker\WebSiteChecker\bin\Debug\WebSiteChecker.exe.config
+C:\Users\AKen\Google 雲端硬碟\Projects\VisualStudio\WebSiteChecker\WebSiteChecker\bin\Debug\WebSiteChecker.exe
+C:\Users\AKen\Google 雲端硬碟\Projects\VisualStudio\WebSiteChecker\WebSiteChecker\bin\Debug\WebSiteChecker.pdb
+C:\Users\AKen\Google 雲端硬碟\Projects\VisualStudio\WebSiteChecker\WebSiteChecker\obj\Debug\WebSiteChecker.Form1.resources
+C:\Users\AKen\Google 雲端硬碟\Projects\VisualStudio\WebSiteChecker\WebSiteChecker\obj\Debug\WebSiteChecker.Properties.Resources.resources
+C:\Users\AKen\Google 雲端硬碟\Projects\VisualStudio\WebSiteChecker\WebSiteChecker\obj\Debug\WebSiteChecker.csproj.GenerateResource.Cache
+C:\Users\AKen\Google 雲端硬碟\Projects\VisualStudio\WebSiteChecker\WebSiteChecker\obj\Debug\WebSiteChecker.exe
+C:\Users\AKen\Google 雲端硬碟\Projects\VisualStudio\WebSiteChecker\WebSiteChecker\obj\Debug\WebSiteChecker.pdb
+C:\Users\AKen\Google 雲端硬碟\Projects\VisualStudio\WebSiteChecker\WebSiteChecker\bin\Debug\icon001.ico
