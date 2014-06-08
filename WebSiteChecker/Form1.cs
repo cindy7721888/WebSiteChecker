@@ -38,14 +38,17 @@ namespace WebSiteChecker
             this.Icon = new Icon("icon001.ico");
             notifyIcon1.Icon = new Icon("icon001.ico");
 
-            StreamReader sr = new StreamReader(string.Format("{0}/{1}", currDir, fileName));
-            while (!sr.EndOfStream)
+            if (File.Exists(string.Format("{0}/{1}", currDir, fileName)))
             {
-                string _line = sr.ReadLine();
-                listView1.Items.Insert(0, new ListViewItem(new string[] { _line.Split(new char[] { ',' })[0], _line.Split(new char[] { ',' })[1], _line.Split(new char[] { ',' })[2] }));
-                listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                StreamReader sr = new StreamReader(string.Format("{0}/{1}", currDir, fileName));
+                while (!sr.EndOfStream)
+                {
+                    string _line = sr.ReadLine();
+                    listView1.Items.Insert(0, new ListViewItem(new string[] { _line.Split(new char[] { ',' })[0], _line.Split(new char[] { ',' })[1], _line.Split(new char[] { ',' })[2] }));
+                    listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                }
+                sr.Close();
             }
-            sr.Close();
 
             updateTimer();
 
