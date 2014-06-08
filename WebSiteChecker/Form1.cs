@@ -207,6 +207,7 @@ namespace WebSiteChecker
                         if (item.SubItems[1].Text.Equals(_website))
                         {
                             item.SubItems[0].Text = ex.Message;
+                            item.SubItems[2].Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
                             break;
                         }
