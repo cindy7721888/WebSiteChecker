@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WebSiteChecker
@@ -21,6 +15,7 @@ namespace WebSiteChecker
         private string currDir = Directory.GetCurrentDirectory();
         private string fileName = "website.txt";
         private int updateTime = 1000 * 60;
+        private int notify_showtime = 3 * 1000;
 
         public Form1()
         {
@@ -37,6 +32,7 @@ namespace WebSiteChecker
             listView1.FullRowSelect = true;
             this.Icon = new Icon("icon001.ico");
             notifyIcon1.Icon = new Icon("icon001.ico");
+            //notifyIcon1.Visible = true;
 
             if (File.Exists(string.Format("{0}/{1}", currDir, fileName)))
             {
@@ -68,7 +64,6 @@ namespace WebSiteChecker
             Regex _regex = new Regex("http(|s)://.*");
             string _text = textBox1.Text;
 
-
             if (_text != string.Empty)
             {
                 if (_regex.IsMatch(_text))
@@ -86,7 +81,6 @@ namespace WebSiteChecker
 
                     if (!itemExists)
                     {
-
                         listView1.Items.Insert(0, new ListViewItem(new string[] { "Checking...", _text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") }));
                         listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
 
@@ -123,12 +117,10 @@ namespace WebSiteChecker
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
@@ -173,8 +165,10 @@ namespace WebSiteChecker
             }));
         }
 
-        void finishWebRequest(IAsyncResult result) {
-            Invoke(new MethodInvoker(delegate {
+        private void finishWebRequest(IAsyncResult result)
+        {
+            Invoke(new MethodInvoker(delegate
+            {
                 string _website = string.Empty;
                 try
                 {
@@ -191,6 +185,8 @@ namespace WebSiteChecker
                                 item.SubItems[0].Text = response.StatusCode.ToString();
                                 item.SubItems[2].Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                                 listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+
+                                notifyIcon1.ShowBalloonTip(notify_showtime, item.SubItems[1].Text, response.StatusCode.ToString(), ToolTipIcon.Info);
                                 break;
                             }
                         }
@@ -209,6 +205,8 @@ namespace WebSiteChecker
                             item.SubItems[0].Text = ex.Message;
                             item.SubItems[2].Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+
+                            notifyIcon1.ShowBalloonTip(notify_showtime, item.SubItems[1].Text, ex.Message, ToolTipIcon.Info);
                             break;
                         }
                     }

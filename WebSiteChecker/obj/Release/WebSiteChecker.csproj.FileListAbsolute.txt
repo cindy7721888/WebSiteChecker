@@ -7,3 +7,4 @@ C:\Users\AKen\Google 雲端硬碟\Projects\VisualStudio\WebSiteChecker\WebSiteCh
 C:\Users\AKen\Google 雲端硬碟\Projects\VisualStudio\WebSiteChecker\WebSiteChecker\obj\Release\WebSiteChecker.csproj.GenerateResource.Cache
 C:\Users\AKen\Google 雲端硬碟\Projects\VisualStudio\WebSiteChecker\WebSiteChecker\obj\Release\WebSiteChecker.exe
 C:\Users\AKen\Google 雲端硬碟\Projects\VisualStudio\WebSiteChecker\WebSiteChecker\obj\Release\WebSiteChecker.pdb
+C:\Users\AKen\Google 雲端硬碟\Projects\VisualStudio\WebSiteChecker\WebSiteChecker\obj\Release\WebSiteChecker.csprojResolveAssemblyReference.cache
