@@ -1,4 +1,3 @@
-無法連接至遠端伺服器,http://xiaozi7912.no-ip.org/,2014-06-09 01:34:39
-OK,http://www.harvesteducation.cc/,2014-06-09 01:34:39
-OK,http://www.braincorner.com.tw/,2014-06-09 01:34:39
-OK,http://www.neurosky.com.tw/,2014-06-09 01:34:39
+OK,http://www.neurosky.com.tw/,2014-06-11 07:16:54
+OK,http://www.braincorner.com.tw/,2014-06-11 07:16:54
+OK,http://www.harvesteducation.cc/,2014-06-11 07:16:54

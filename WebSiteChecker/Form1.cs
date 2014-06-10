@@ -16,6 +16,7 @@ namespace WebSiteChecker
         private string fileName = "website.txt";
         private int updateTime = 1000 * 60;
         private int notify_showtime = 3 * 1000;
+        private Boolean firstStart = true;
 
         public Form1()
         {
@@ -32,7 +33,6 @@ namespace WebSiteChecker
             listView1.FullRowSelect = true;
             this.Icon = new Icon("icon001.ico");
             notifyIcon1.Icon = new Icon("icon001.ico");
-            //notifyIcon1.Visible = true;
 
             if (File.Exists(string.Format("{0}/{1}", currDir, fileName)))
             {
@@ -210,6 +210,12 @@ namespace WebSiteChecker
                             break;
                         }
                     }
+                }
+
+                if (firstStart)
+                {
+                    this.WindowState = FormWindowState.Minimized;
+                    firstStart = false;
                 }
             }));
         }
